@@ -45,3 +45,29 @@
   $(window).on('scroll resize', updateSpy);
   updateSpy();
 }(jQuery));
+
+/* ---------- Recommendations slider ---------- */
+(function ($) {
+  'use strict';
+
+  $('.rec-slider').slick({
+    infinite: true,
+    centerMode: true,
+    centerPadding: '74px',
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 3500,
+    pauseOnHover: true,
+    pauseOnDotsHover: true,
+    swipe: true,
+    touchMove: true,
+    speed: 500,
+    responsive: [
+      { breakpoint: 1024, settings: { slidesToShow: 2, centerMode: false } },
+      { breakpoint: 640, settings: { slidesToShow: 1, centerMode: true, centerPadding: '28px' } }
+    ]
+  });
+}(jQuery));

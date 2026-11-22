@@ -191,3 +191,38 @@ button { cursor: pointer; }
   .projects__grid { grid-template-columns: 1fr; }
   .project-card__img { height: auto; aspect-ratio: 385 / 256; }
 }
+
+/* ==========================================================
+   7. Recommendations slider
+   ========================================================== */
+.rec-slider:not(.slick-initialized) { display: flex; gap: 25px; overflow: hidden; }
+.rec-slider:not(.slick-initialized) .rec-card { flex: 0 0 340px; }
+.rec-slider .slick-slide { padding-inline: 12.5px; height: auto; }
+.rec-slider .slick-track { display: flex; }
+.rec-slider .slick-slide > div { height: 100%; }
+.rec-card {
+  display: flex !important; flex-direction: column; height: 100%; min-height: 327px;
+  padding: 25px 27px; background: var(--white);
+}
+.rec-card__stars { display: flex; gap: 6px; }
+.rec-card__stars img { width: 17px; height: 17px; }
+.rec-card__title { margin-top: 17px; font-size: 18px; line-height: 1.236; font-weight: 500; text-transform: capitalize; }
+.rec-card__text { margin-top: 18px; font-size: 15px; color: var(--grey-text); text-transform: capitalize; }
+.rec-card__author { display: flex; align-items: center; gap: 16px; margin-top: auto; padding-top: 20px; }
+.rec-card__author img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.rec-card__name { font-size: 18px; line-height: 1.236; font-weight: 500; }
+.rec-card__role { font-size: 15px; color: var(--grey-text); text-transform: capitalize; }
+
+.rec-slider .slick-dots { display: flex; justify-content: center; gap: 8px; margin-top: 45px; }
+.rec-slider .slick-dots li { line-height: 0; }
+.rec-slider .slick-dots button {
+  width: 10px; height: 10px; padding: 0; border: 0; border-radius: 50%;
+  font-size: 0; background: var(--yellow-soft);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.rec-slider .slick-dots button:hover { background: rgba(255, 180, 0, 0.6); }
+.rec-slider .slick-dots .slick-active button { background: var(--yellow); transform: scale(1.2); }
+
+@media (max-width: 480px) {
+  .rec-card { padding: 20px; }
+}
