@@ -71,3 +71,58 @@
     ]
   });
 }(jQuery));
+
+/* ---------- Contact form (nothing is stored or sent) ---------- */
+(function ($) {
+  'use strict';
+
+  var $form = $('#contact-form');
+  var $status = $('#form-status');
+  var statusTimer = null;
+  var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  function setError($input, message) {
+    $input.attr('aria-invalid', message ? 'true' : 'false');
+    $('#' + $input.attr('id') + '-error').text(message || '');
+  }
+
+  function validate() {
+    var $name = $('#name');
+    var $email = $('#email');
+    var valid = true;
+
+    if (!$.trim($name.val())) {
+      setError($name, 'Please enter your full name.');
+      valid = false;
+    } else {
+      setError($name, '');
+    }
+
+    if (!$.trim($email.val())) {
+      setError($email, 'Please enter your email address.');
+      valid = false;
+    } else if (!emailPattern.test($.trim($email.val()))) {
+      setError($email, 'Please enter a valid email address.');
+      valid = false;
+    } else {
+      setError($email, '');
+    }
+
+    if (!valid) { $form.find('[aria-invalid="true"]').first().trigger('focus'); }
+    return valid;
+  }
+
+  $form.on('input', '#name, #email', function () {
+    if ($(this).attr('aria-invalid') === 'true') { setError($(this), ''); }
+  });
+
+  $form.on('submit', function (e) {
+    e.preventDefault();
+    if (!validate()) { return; }
+
+    $form[0].reset();
+    $status.text('Thanks, message sent');
+    clearTimeout(statusTimer);
+    statusTimer = setTimeout(function () { $status.text(''); }, 4000);
+  });
+}(jQuery));
