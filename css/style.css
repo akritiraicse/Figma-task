@@ -151,7 +151,7 @@ button { cursor: pointer; }
     position: absolute; left: 0; right: 0; top: 100%;
     background: var(--white); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
     max-height: 0; overflow: hidden; visibility: hidden;
-    transition: max-height 0.3s ease, visibility 0.3s;
+    transition: max-height 0.3s ease;
   }
   .site-nav.is-open { max-height: 420px; visibility: visible; }
   .site-nav__list { flex-direction: column; align-items: stretch; gap: 4px; padding: 12px 16px 20px; }
