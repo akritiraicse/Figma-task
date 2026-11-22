@@ -265,3 +265,42 @@ button { cursor: pointer; }
   .contact__grid { grid-template-columns: 1fr; gap: 40px; }
   .contact__title { margin-bottom: 24px; }
 }
+
+/* ==========================================================
+   9. Partner logos
+   ========================================================== */
+.partners { padding: 0 var(--gutter) 0; }
+.partners__list { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px clamp(24px, 10vw, 144px); }
+.partners__list img { width: 140px; height: 144px; object-fit: cover; }
+
+/* ==========================================================
+   10. Footer
+   ========================================================== */
+.site-footer { padding-top: 45px; background: var(--bg); }
+.site-footer__grid { display: flex; justify-content: space-between; gap: 40px; margin-top: 50px; }
+.ratings { display: flex; flex-direction: column; gap: 20px; width: 177px; flex-shrink: 0; }
+.ratings img { border-radius: 4px; }
+.ratings p { font-size: 12px; line-height: 18px; color: var(--grey-text); text-transform: capitalize; }
+.site-footer__links { display: flex; gap: clamp(40px, 11.8vw, 170px); }
+.footer-col { display: flex; flex-direction: column; gap: 20px; }
+.footer-col__title { font-size: 20px; line-height: 30px; font-weight: 700; text-transform: capitalize; color: #000; }
+.footer-col ul { display: flex; flex-direction: column; gap: 8px; }
+.footer-col li { text-transform: capitalize; color: #000; }
+.footer-col a:hover { color: var(--yellow); }
+.footer-col__social { gap: 16px !important; }
+.footer-col__social li { text-transform: none; }
+.copyright { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 16px var(--gutter); font-size: 15px; color: var(--grey-text); text-transform: capitalize; }
+
+@media (max-width: 1024px) {
+  .site-footer__grid { flex-direction: column; }
+  .ratings { flex-direction: row; flex-wrap: wrap; width: auto; gap: 24px 32px; }
+  .ratings li { width: auto; }
+  .site-footer__links { display: grid; grid-template-columns: repeat(3, auto); justify-content: space-between; gap: 32px; }
+}
+@media (max-width: 768px) {
+  .site-footer__links { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .site-footer__links { grid-template-columns: 1fr; }
+  .copyright { text-align: center; }
+}
