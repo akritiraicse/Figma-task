@@ -26,8 +26,51 @@
     ============================================================
   -->
 
-  <!-- header -->
-  <!-- hero -->
+  <header class="site-header" id="top">
+    <div class="site-header__inner">
+      <a class="logo" href="#home" aria-label="Go to home">
+        <img src="assets/images/logo.png" width="158" height="76" alt="Portfolio logo, a pair of glasses">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link is-active" href="#home" data-spy="home">Home</a></li>
+          <li><a class="site-nav__link" href="#projects">Skills</a></li>
+          <li><a class="site-nav__link" href="#projects">Education</a></li>
+          <li><a class="site-nav__link" href="#projects" data-spy="projects">Projects</a></li>
+          <li><a class="site-nav__link" href="#recommendations" data-spy="recommendations">Recommendations</a></li>
+          <li><a class="site-nav__link" href="#contact" data-spy="contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home" aria-labelledby="hero-title">
+    <span class="shape shape--circle-green shape--a" aria-hidden="true"><img src="assets/images/hero-ellipse-1.svg" width="23" height="22" alt=""></span>
+    <span class="shape shape--circle-green shape--b" aria-hidden="true"><img src="assets/images/hero-ellipse-1.svg" width="23" height="22" alt=""></span>
+    <span class="shape shape--circle-yellow shape--c" aria-hidden="true"><img src="assets/images/hero-ellipse-2.svg" width="23" height="22" alt=""></span>
+    <span class="shape shape--circle-yellow shape--d" aria-hidden="true"><img src="assets/images/hero-ellipse-2.svg" width="23" height="22" alt=""></span>
+    <span class="shape shape--square-yellow" aria-hidden="true"></span>
+    <span class="shape shape--square-blue" aria-hidden="true"></span>
+    <span class="shape shape--triangle" aria-hidden="true"><img src="assets/images/hero-polygon.svg" width="20" height="16" alt=""></span>
+
+    <div class="hero__inner container">
+      <div class="hero__content">
+        <h1 id="hero-title" class="hero__title">I’m Rayan Adlrdard <span class="hero__title-line"><span class="text-yellow">Front-end</span> Developer</span></h1>
+        <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc lectus.</p>
+        <a class="btn btn--primary" href="#contact">
+          HIRE ME
+          <img src="assets/images/icons/arrow-right.svg" width="16" height="16" alt="">
+        </a>
+      </div>
+    </div>
+    <img class="hero__art" src="assets/images/hero-illustration.svg" width="808" height="550" alt="Illustration of a developer in a yellow sweater sitting on a desk next to a monitor showing code">
+  </section>
+
   <main>
     <!-- projects -->
     <!-- recommendations -->
