@@ -1,11 +1,11 @@
-# Figma Assignment
+# Figma Assignments
 
 Name: Akriti Rai
 Section: 46
 Admission No: 24SCS1420054
 
-Home page built from the given Figma design using HTML, CSS and JavaScript.
+## Tasks
+- Task 1: Home page (task-1-home-page)  Live: https://figma-task-one.vercel.app/
+- Task 2: Wonderlust page (task-2-wonderlust)
 
-Live link: https://figma-task-one.vercel.app/
-
-To run it locally, open index.html in a browser.
+Each task is a plain HTML, CSS and JavaScript project. To run one, open its index.html in a browser.
