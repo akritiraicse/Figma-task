@@ -187,3 +187,23 @@ button { font: inherit; cursor: pointer; }
 @media (min-width: 1024px) {
   .cards { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
+
+/* ==========================================================
+   8. About us
+   ========================================================== */
+.about { background: var(--bg-alt); }
+.about__title { margin-bottom: 32px; text-align: center; }
+.about__card {
+  position: relative; overflow: hidden; padding: 32px;
+  background: var(--white); border: 1px solid var(--about-border); border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.about__glow {
+  position: absolute; top: -79px; right: -79px; width: 256px; height: 256px;
+  background: var(--about-glow); border-radius: 50%; opacity: 0.3; filter: blur(64px);
+}
+.about__text { position: relative; max-width: 510px; margin-inline: auto; font-size: 18px; line-height: 29.25px; text-align: center; }
+
+@media (min-width: 768px) {
+  .about__card { padding: 48px; }
+}
