@@ -1,0 +1,47 @@
+/* ==========================================================
+   1. Design tokens
+   ========================================================== */
+:root {
+  --primary: #0077b6;
+  --primary-dark: #005d90;
+  --navy: #023e8a;
+  --text: #404850;
+  --bg: #f8f9fa;
+  --bg-alt: #f3f4f5;
+  --white: #ffffff;
+  --card-border: #e7e8e9;
+  --about-border: #edeeef;
+  --header-border: rgba(191, 199, 209, 0.3);
+  --accent: #e9c46a;
+  --accent-text: #773e00;
+  --about-glow: #cde5ff;
+  --font: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --side: 16px;
+  --header-h: 80px;
+  --container: 1200px;
+}
+
+/* ==========================================================
+   2. Reset and base
+   ========================================================== */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text);
+  background: var(--bg);
+  overflow-x: hidden;
+}
+img, svg { display: block; max-width: 100%; }
+h1, h2, h3, p, ul { margin: 0; padding: 0; }
+ul { list-style: none; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
+:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
