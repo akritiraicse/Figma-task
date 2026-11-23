@@ -136,3 +136,54 @@ button { font: inherit; cursor: pointer; }
 @media (min-width: 1024px) {
   .hero { min-height: clamp(640px, 100vh, 900px); }
 }
+
+/* ==========================================================
+   6. Shared section layout
+   ========================================================== */
+.section { padding: 96px var(--side); }
+.section__inner { width: 100%; max-width: var(--container); margin-inline: auto; }
+.section__head { margin-bottom: 64px; text-align: center; }
+.section__title { font-size: 16px; line-height: 24px; font-weight: 400; color: var(--navy); }
+.section__sub { margin-top: 16px; }
+
+@media (min-width: 768px) {
+  .section { padding-block: 95px; }
+  .section__title { font-size: 36px; line-height: 46.8px; font-weight: 700; padding-bottom: 1px; }
+}
+
+/* ==========================================================
+   7. Destinations
+   ========================================================== */
+.destinations { background: var(--bg); }
+.cards { display: grid; grid-template-columns: 1fr; gap: 24px; }
+.card {
+  display: flex; flex-direction: column; overflow: hidden;
+  background: var(--white); border: 1px solid var(--card-border); border-radius: 12px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card:hover { transform: translateY(-4px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); }
+.card__media { position: relative; aspect-ratio: 4 / 3; }
+.card__media img { width: 100%; height: 100%; object-fit: cover; }
+.card__price {
+  position: absolute; top: 16px; right: 16px; padding: 4px 12px;
+  font-size: 14px; line-height: 14px; font-weight: 600; letter-spacing: 0.05em;
+  color: var(--accent-text); background: var(--accent); border-radius: 9999px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.card__body { display: flex; flex: 1; flex-direction: column; padding: 24px; }
+.card__title { margin-bottom: 8px; font-size: 28px; line-height: 39.2px; font-weight: 700; color: var(--primary); }
+.card__text { flex: 1; margin-bottom: 24px; }
+.card__btn {
+  width: 100%; padding: 12px 0; border: 0; border-radius: 8px;
+  font-size: 14px; line-height: 14px; font-weight: 600; letter-spacing: 0.05em;
+  color: var(--accent-text); background: var(--accent);
+  transition: filter 0.2s ease;
+}
+.card__btn:hover { filter: brightness(0.95); }
+
+@media (min-width: 768px) {
+  .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1024px) {
+  .cards { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
