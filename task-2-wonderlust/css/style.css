@@ -207,3 +207,28 @@ button { font: inherit; cursor: pointer; }
 @media (min-width: 768px) {
   .about__card { padding: 48px; }
 }
+
+/* ==========================================================
+   9. Footer
+   ========================================================== */
+.site-footer { background: var(--white); border-top: 1px solid var(--about-border); }
+.site-footer__inner {
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
+  width: 100%; max-width: calc(var(--container) + var(--side) * 2);
+  margin-inline: auto; padding: 48px var(--side) 16px;
+}
+.footer-nav__list { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; }
+.footer-nav a:hover, .back-top:hover { color: var(--primary); }
+.site-footer__legal { display: flex; flex-direction: column; gap: 8px; width: 100%; max-width: 358px; }
+.site-footer__copy { max-width: 324px; }
+.back-top {
+  display: inline-flex; align-items: center; align-self: flex-end; gap: 4px;
+  font-size: 14px; line-height: 14px; font-weight: 600; letter-spacing: 0.05em; color: var(--primary-dark);
+}
+
+@media (min-width: 768px) {
+  .site-footer__inner { flex-direction: row; justify-content: space-between; padding-block: 48px; }
+  .footer-nav { max-width: 214px; }
+  .site-footer__legal { width: 205px; }
+  .site-footer__copy { max-width: none; }
+}
